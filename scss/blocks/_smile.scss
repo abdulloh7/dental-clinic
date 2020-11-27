@@ -1,0 +1,169 @@
+.smile {
+  position: relative;
+  z-index: 1;
+}
+
+.smile__container {
+  position: relative;
+  z-index: 1;
+}
+
+.smile__arrow {
+  border: none;
+  background: #FFD600;
+  border-radius: 5px;
+  padding: 0;
+  padding: 24px 17px 24px 12px;
+  position: absolute;
+  z-index: 2;
+  top: 650px;
+  left: 30;
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.smile__next {
+  padding: 0;
+  padding: 22px;
+  position: absolute;
+  z-index: 2;
+  top: 650px;
+  left: 70px;
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.smile__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.smile__text {
+  margin: 0;
+  margin-bottom: 10px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #272727;
+}
+
+.smile__heading {
+  margin: 0;
+  margin-bottom: 27px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 56px;
+  text-transform: uppercase;
+  color: #272727;
+  max-width: 543px;
+}
+
+.smile__link {
+  display: inline-block;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+  background: #0055B8;
+  border-radius: 5px;
+  padding: 24px 115px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.smile__img {
+  display: block;
+  width: 1920px;
+  height: 900px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.smile-item {
+  position: relative;
+  z-index: 2;
+}
+
+.smile__inner-wrapper {
+  position: absolute;
+  top: 280px;
+}
+
+@include responsive (1015) {
+  .smile__inner-wrapper {
+    position: relative;
+    top: 0;
+    margin-top: 21px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  .smile__heading {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .smile__text {
+    line-height: 25px;
+  }
+}
+
+@include responsive (640) {
+  .smile__link {
+    display: none;
+  }
+}
+
+@include responsive (550) {
+  .smile__heading{
+    font-size: 40px;
+    line-height: 35px;
+  }
+}
+
+@include responsive (460) {
+  .smile__heading{
+    font-size: 38px;
+  }
+}
+
+@include responsive (440) {
+  .smile__heading{
+    font-size: 35px;
+  }
+}
+
+@include responsive (405) {
+  .smile__heading{
+    font-size: 30px;
+  }
+}

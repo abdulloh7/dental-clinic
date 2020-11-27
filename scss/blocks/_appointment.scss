@@ -1,0 +1,170 @@
+.appointment__container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transform: translateY(-52px);
+  position: relative;
+  z-index: 4;
+}
+
+.appointment__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+}
+
+.appointment__item {
+  background: #FFE040;
+  border-radius: 5px;
+  padding: 39px 37px 56px 37px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &::before {
+    content: "";
+    width: 87px;
+    height: 87px;
+    background-image: url("../img/prosthetics.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-bottom: 19px;
+  }
+
+  &--gold {
+    background-color: #FFD600;
+  }
+
+  &--gold::before {
+    background-image: url("../img/treatment.png");
+  }
+}
+
+.appointment__heading {
+  margin: 0;
+  margin-bottom: 4px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #272727;
+}
+
+.appointment__text {
+  margin: 0;
+  max-width: 227px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+  color: #272727;
+}
+
+.appointment__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #0055B8;
+  border-radius: 5px;
+  padding: 25px 34px 18px 34px;
+  width: 540px;
+}
+
+.appointment__title {
+  margin: 0;
+  margin-bottom: 29px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  color: #FFFFFF;
+}
+
+.appointment__input {
+  background-color: transparent;
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 14px;
+  width: 100%;
+  margin-bottom: 12px;
+
+  &:focus {
+    background-color: #FFFFFF;
+    border: 1px solid #0055B8;
+  }
+}
+
+.appointment__button {
+  background: #FFD600;
+  border-radius: 5px;
+  padding: 17px 63px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #272727;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease ;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.appointment__form-inner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 22px;
+}
+
+.appointment__form-text {
+  margin: 0;
+  max-width: 256px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+
+.appointment__form-label {
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+  width: 35px;
+  height: 35px;
+}
+
+.appointment__form-input:checked
+.appointment__form-label .appointment__form-text {
+  background-image: url("../img/check.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+@include responsive (1078) {
+  .appointment__container {
+    transform: translateY(-27px);
+  }
+
+  .appointment__container {
+    padding: 0;
+  }
+}
+
+@include responsive (1015) {
+  .appointment__list {
+    display: none;
+  }
+
+}

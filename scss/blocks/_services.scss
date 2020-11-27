@@ -1,0 +1,192 @@
+.services {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.services__container {
+  padding-right: 67px;
+  padding-left: 67px;
+  position: relative;
+  z-index: 4;
+}
+
+.services__title {
+  background-image: url("../../img/heading-bg.svg");
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 35px;
+}
+
+.services__heading {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  color: #272727;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 11px;
+  position: relative;
+  z-index: 6;
+
+  &::before {
+    content: "";
+    width: 50px;
+    border-top: 3px solid #FFD600;
+    margin-bottom: 16px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+  }
+}
+
+.services__text {
+  margin: 0;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: #140f0f;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.services__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  overflow-x: hidden;
+  padding: 15px;
+}
+
+.services__item {
+  background: #FFFFFF;
+  box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 28px 66px 24px 65px;
+  width: 200px;
+  margin-right: 35px;
+  text-align: center;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &::before {
+    content: "";
+    width: 77px;
+    height: 66px;
+    background-image: url("../img/teeth.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: block;
+    margin-bottom: 13px;
+  }
+
+  &--hygiene::before {
+    background-image: url("../img/hygiene.png");
+  }
+
+  &--diagnostic::before {
+    background-image: url("../img/diagnostic.png");
+  }
+
+  &--dentistry::before {
+    background-image: url("../img/children's.png");
+  }
+}
+
+.services__head {
+  margin: 0;
+  margin-bottom: 25px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #272727;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+
+
+  &::after {
+    content: "";
+    width: 50%;
+    border: 2px solid #0A60C3;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    transform: translateX(50%);
+  }
+
+  &--margin {
+    margin-bottom: 45px;
+  }
+
+  &--margin::after {
+    bottom: -33px;
+  }
+}
+
+.services__del {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.25);
+  margin-bottom: 3px;
+}
+
+.services__price {
+  margin: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #0A60C3;
+}
+
+.services__prev {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  position: absolute;
+  top: 250px;
+  left: 0;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.services__next {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  position: absolute;
+  right: -10px;
+  top: 250px;
+  margin-right: 20px;
+}
+
+@include responsive (1030) {
+  .services__prev {
+    margin-left: 20px;
+  }
+
+  .services__next {
+    margin-right: 20px;
+  }
+}
+
+@include responsive (700) {
+  .services__prev {
+    display: none;
+  }
+
+  .services__next {
+    display: none;
+  }
+}

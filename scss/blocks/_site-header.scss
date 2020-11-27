@@ -1,0 +1,142 @@
+.site-header {
+  padding-top: 12px;
+  padding-bottom: 35px;
+  position: fixed;
+  z-index: 55;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.site-header__container {
+  position: relative;
+  z-index: 2;
+}
+
+.site-header__bottom {
+  position: absolute;
+  left: 0;
+  top: 75px;
+  width: 100%;
+}
+
+.site-header__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.site-header__item {
+  display: flex;
+  align-items: center;
+  transition: 0.3s ease;
+
+  &::before {
+    content: "";
+    width: 29px;
+    height: 29px;
+    background-image: url("../img/phone.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    margin-right: 7px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.site-header__contact {
+  margin: 0;
+  margin-bottom: 3px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #272727;
+}
+
+.site-header__number {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  color: #272727;
+}
+
+.site-header__time {
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    width: 29px;
+    height: 29px;
+    background-image: url("../img/clock.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    margin-right: 7px;
+  }
+}
+
+.site-header__time-open {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #00B007;
+  margin: 0;
+  margin-bottom: 3px;
+}
+
+.site-header__time-text {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  color: #272727;
+  margin: 0;
+}
+
+.site-header__link-img {
+  display: block;
+}
+
+.site-header__link {
+  display: inline-block;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+@include responsive (1030) {
+  body {
+    margin-top: 72px;
+  }
+
+  .site-header {
+    padding-top: 0;
+  }
+
+  .site-header__top {
+    display: none;
+  }
+
+  .site-header__bottom {
+    top: 0;
+  }
+
+}

@@ -1,0 +1,140 @@
+.technology {
+  padding-bottom: 35px;
+}
+
+.technology__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.technology__img {
+  display: block;
+  margin-left: -280px;
+}
+
+.technology__title {
+  max-width: 742px;
+  margin-left: 80px;
+  background-image: url("../../img/heading-bg.svg");
+  background-position: 0 23px;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+.technology__heading {
+  margin: 0;
+  margin-bottom: 15px;
+  max-width: 500px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  color: #272727;
+
+  &::before {
+    content: "";
+    width: 50px;
+    height: 3px;
+    background-color: #FFD600;
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+.technology__text {
+  margin: 0;
+  max-width: 798px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+  color: #000000;
+}
+
+.technology__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-top: 27px;
+}
+
+.technology__item {
+  margin-bottom: 18px;
+  display: flex;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    width: 72px;
+    height: 70px;
+    background-image: url("../img/expert.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    flex-shrink: 0;
+    margin-right: 33px;
+  }
+
+  &--teeth::before {
+    background-image: url("../img/teeth.png");
+  }
+
+  &--location::before {
+    background-image: url("../img/location-icon.png");
+  }
+}
+
+.technology__item-inner {
+  max-width: 520px;
+}
+
+.technology__item-heading {
+  margin: 0;
+  margin-bottom: 8px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+
+.technology__item-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  color: #4D4D4D;
+  margin: 0;
+}
+
+@include responsive (1100) {
+  .technology__title {
+    margin-left: 10px;
+  }
+
+  .technology__heading {
+    font-size: 34px;
+  }
+}
+
+@include responsive (1010) {
+  .technology__container {
+    flex-direction: column;
+  }
+
+  .technology__img {
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+
+  .technology__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
